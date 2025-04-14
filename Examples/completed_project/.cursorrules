@@ -1,0 +1,69 @@
+Techical design is in @Project_Architecture.md
+Feature Requirements in @Project_Overview.md
+Implementation plain is in @Project_Status.md,
+
+After Task is completed, update @Project_Status and Project Structure in .cursorrules
+
+## Project Structure
+
+```
+/
+├── client/                     # Frontend React application
+│   ├── public/                 # Public assets
+│   ├── src/
+│   │   ├── components/         # Reusable components
+│   │   │   └── layout/        # Layout components
+│   │   │       ├── Header.jsx # Header component
+│   │   │       ├── Layout.jsx # Main layout component
+│   │   │       └── Sidebar.jsx # Sidebar navigation
+│   │   ├── pages/             # Page components
+│   │   │   ├── Home.jsx      # Home page
+│   │   │   ├── Chat.jsx      # Chat page
+│   │   │   ├── Login.jsx     # Login page
+│   │   │   └── Register.jsx  # Register page
+│   │   ├── App.jsx            # Main App component
+│   │   └── main.jsx           # Entry point
+│   ├── package.json           # Frontend dependencies
+│   ├── vite.config.js         # Vite configuration
+│   └── README.md              # Client documentation
+│
+├── server/                    # Backend Node.js/Express application
+│   ├── src/
+│   │   ├── controllers/       # Request handlers
+│   │   ├── middlewares/       # Express middlewares
+│   │   │   └── auth.middleware.js # Authentication middleware
+│   │   ├── models/            # Mongoose models
+│   │   │   ├── user.model.js # User model
+│   │   │   └── chat.model.js # Chat model
+│   │   ├── routes/            # API routes
+│   │   │   ├── auth.routes.js # Authentication routes
+│   │   │   ├── chat.routes.js # Chat management routes
+│   │   │   └── health.routes.js # Health check routes
+│   │   ├── services/          # Business logic services
+│   │   │   ├── auth.service.js # Authentication service
+│   │   │   ├── chat.service.js # Chat management service
+│   │   │   └── ai.service.js  # AI integration service (pending)
+│   │   ├── utils/             # Utility functions
+│   │   │   └── db.js         # Database connection utility
+│   │   ├── config/            # Configuration files
+│   │   │   └── config.js     # Application configuration
+│   │   └── server.js          # Server entry point
+│   ├── tests/                 # Backend tests
+│   ├── API_Validation.md      # API testing documentation
+│   ├── .env                   # Environment variables
+│   ├── package.json           # Backend dependencies
+│   └── README.md              # Server documentation
+│
+├── .github/                   # GitHub configuration
+│   └── workflows/             # GitHub Actions workflows
+├── docker/                    # Docker configuration
+│   ├── client.Dockerfile      # Frontend Dockerfile
+│   └── server.Dockerfile      # Backend Dockerfile
+├── docker-compose.yml         # Docker Compose configuration
+├── .env.example               # Example environment variables
+├── package.json               # Root package.json for scripts
+├── README.md                  # Project documentation
+├── Project_Architecture.md    # Technical design document
+├── Project_Overview.md        # Feature requirements
+└── Project_Status.md          # Implementation status
+```
